@@ -21,7 +21,7 @@ import javax.swing.plaf.basic.BasicButtonUI;
 /**
  * @author Jean-Pierre PEIFFER
  * @edition 2019
- * @version 1
+ * @version 1.0
  * 
  *          This works fine with Windows 10 and Java 10 & GNU/Linux (Ubuntu
  *          18.10) and Java 8
