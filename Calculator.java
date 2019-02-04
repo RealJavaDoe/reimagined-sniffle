@@ -45,9 +45,9 @@ public class Calculator {
 	private static final Dimension DIM_8 = new Dimension(310, 280);
 	private static final Font FONT_1 = new Font("Arial", Font.BOLD, 20);
 	private static final Font FONT_2 = new Font("Arial", Font.PLAIN, 16);
-	private static final String[] TAB_STRING = { "7", "8", "9", "4", "5", "6", "1", "2", "3", ".", "0", "\u00b1",
+	private static final String[] TEXT = { "7", "8", "9", "4", "5", "6", "1", "2", "3", ".", "0", "\u00b1",
 			"\u00f7", "\u00d7", "-", "+", "\u25c4", "C", "=" };
-	private static final JButton[] TAB_BUTTON = new JButton[TAB_STRING.length];
+	private static final JButton[] BUTTON = new JButton[TEXT.length];
 	private boolean clickedOnOperator = false, update = false;
 	private double number;
 	private int decimalPoint = 0;
@@ -75,99 +75,99 @@ public class Calculator {
 		panel[4] = new JPanel();
 		panel[4].setPreferredSize(DIM_5);
 		panel[4].setBackground(COLOR_1);
-		for (int i = 0; i < TAB_STRING.length; i++) {
-			TAB_BUTTON[i] = new JButton(TAB_STRING[i]);
-			TAB_BUTTON[i].setPreferredSize(DIM_6);
-			TAB_BUTTON[i].setBackground(COLOR_3);
-			TAB_BUTTON[i].setFont(FONT_2);
-			TAB_BUTTON[i].setUI(new Button());
+		for (int i = 0; i < TEXT.length; i++) {
+			BUTTON[i] = new JButton(TEXT[i]);
+			BUTTON[i].setPreferredSize(DIM_6);
+			BUTTON[i].setBackground(COLOR_3);
+			BUTTON[i].setFont(FONT_2);
+			BUTTON[i].setUI(new Button());
 			switch (i) {
 			case 0:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 1:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 2:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 3:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 4:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 5:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 6:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 7:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 8:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 9:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setBackground(COLOR_4);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].setBackground(COLOR_4);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 10:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].addActionListener(new NumberListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].addActionListener(new NumberListener());
 				break;
 			case 11:
-				panel[2].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setBackground(COLOR_4);
-				TAB_BUTTON[i].addActionListener(new ChangeSignListener());
+				panel[2].add(BUTTON[i]);
+				BUTTON[i].setBackground(COLOR_4);
+				BUTTON[i].addActionListener(new ChangeSignListener());
 				break;
 			case 12:
-				panel[3].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setBackground(COLOR_5);
-				TAB_BUTTON[i].addActionListener(new DivisionListener());
+				panel[3].add(BUTTON[i]);
+				BUTTON[i].setBackground(COLOR_5);
+				BUTTON[i].addActionListener(new DivisionListener());
 				break;
 			case 13:
-				panel[3].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setBackground(COLOR_5);
-				TAB_BUTTON[i].addActionListener(new MultiplicationListener());
+				panel[3].add(BUTTON[i]);
+				BUTTON[i].setBackground(COLOR_5);
+				BUTTON[i].addActionListener(new MultiplicationListener());
 				break;
 			case 14:
-				panel[3].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setBackground(COLOR_5);
-				TAB_BUTTON[i].addActionListener(new SubtractionListener());
+				panel[3].add(BUTTON[i]);
+				BUTTON[i].setBackground(COLOR_5);
+				BUTTON[i].addActionListener(new SubtractionListener());
 				break;
 			case 15:
-				panel[3].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setBackground(COLOR_5);
-				TAB_BUTTON[i].addActionListener(new AdditionListener());
+				panel[3].add(BUTTON[i]);
+				BUTTON[i].setBackground(COLOR_5);
+				BUTTON[i].addActionListener(new AdditionListener());
 				break;
 			case 16:
-				panel[4].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setBackground(COLOR_4);
-				TAB_BUTTON[i].addActionListener(new BackListener());
+				panel[4].add(BUTTON[i]);
+				BUTTON[i].setBackground(COLOR_4);
+				BUTTON[i].addActionListener(new BackListener());
 				break;
 			case 17:
-				panel[4].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setForeground(Color.RED);
-				TAB_BUTTON[i].setBackground(COLOR_4);
-				TAB_BUTTON[i].addActionListener(new AllClearListener());
+				panel[4].add(BUTTON[i]);
+				BUTTON[i].setForeground(Color.RED);
+				BUTTON[i].setBackground(COLOR_4);
+				BUTTON[i].addActionListener(new AllClearListener());
 				break;
 			default:
-				panel[4].add(TAB_BUTTON[i]);
-				TAB_BUTTON[i].setPreferredSize(DIM_7);
-				TAB_BUTTON[i].setBackground(COLOR_4);
-				TAB_BUTTON[i].addActionListener(new ResultListener());
+				panel[4].add(BUTTON[i]);
+				BUTTON[i].setPreferredSize(DIM_7);
+				BUTTON[i].setBackground(COLOR_4);
+				BUTTON[i].addActionListener(new ResultListener());
 				break;
 			}
 		}
