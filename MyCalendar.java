@@ -191,8 +191,7 @@ public class MyCalendar {
 				container.removeAll();
 				frame.add(getDisplay(month, year));
 				frame.validate();
-			} else
-				return;
+			}
 		}
 
 	};
@@ -222,8 +221,7 @@ public class MyCalendar {
 				container.removeAll();
 				frame.add(getDisplay(month, year));
 				frame.validate();
-			} else
-				return;
+			}
 		}
 
 	};
