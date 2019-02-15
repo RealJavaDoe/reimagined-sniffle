@@ -182,8 +182,7 @@ public class MyCalendar {
 					month--;
 				else {
 					if (year == 1806) {
-						month = 0;
-						year = 1806;
+						return;
 					} else {
 						month = 11;
 						year--;
