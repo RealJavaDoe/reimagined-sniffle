@@ -105,7 +105,7 @@ public class MyCalendar {
 			if (i == 0) {
 				for (int j = (firstDayOfTheMonth - 1); j <= 6; j++) {
 					if (isCurrentDate(day, month, year))
-						data[i][j] = String.valueOf("*" + day + "*");
+						data[i][j] = String.valueOf("(" + day + ")");
 					else
 						data[i][j] = String.valueOf(day);
 					day++;
