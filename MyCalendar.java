@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableCellRenderer;
  * @edition 2019
  * @version 1.0
  * 
- *          This works fine GNU/Linux (Ubuntu 18.10) and Java 8
+ *          This works fine with GNU/Linux (Ubuntu 18.10) and Java 8
  * 
  */
 
