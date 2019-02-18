@@ -38,6 +38,7 @@ public class MyCalendar {
 	private static final String[] TEXT_BUTTON = { "\u22b2 Prev.", "Now", "Next \u22b3" };
 	private static final String[] TEXT_MONTH = { "January", "February", "March", "April", "May", "June", "July",
 			"August", "September", "October", "November", "December" };
+	private static final String TITLE = "Calendar";
 	private static final Calendar CALENDAR = Calendar.getInstance();
 	private static final int CURRENT_DAY = CALENDAR.get(Calendar.DAY_OF_MONTH);
 	private static final int CURRENT_MONTH = CALENDAR.get(Calendar.MONTH);
@@ -230,7 +231,7 @@ public class MyCalendar {
 
 	public void start(int month, int year) {
 		frame = new JFrame();
-		frame.setTitle("Calendar");
+		frame.setTitle(TITLE);
 		frame.setSize(DIM_2);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
