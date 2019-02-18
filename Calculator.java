@@ -212,6 +212,7 @@ public class Calculator {
 	}
 
 	class NumberListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent e) {
 			String str = ((JButton) e.getSource()).getText();
 			if (update)
@@ -222,9 +223,11 @@ public class Calculator {
 			}
 			display.setText(str);
 		}
+		
 	}
 
 	class DecimalPointListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent e) {
 			decimalPoint++;
 			String str = ((JButton) e.getSource()).getText();
@@ -240,9 +243,11 @@ public class Calculator {
 			}
 			display.setText(str);
 		}
+		
 	}
 
 	class AdditionListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent arg0) {
 			if (clickedOnOperator) {
 				calculate();
@@ -255,9 +260,11 @@ public class Calculator {
 			update = true;
 			decimalPoint = 0;
 		}
+		
 	}
 
 	class SubtractionListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent arg0) {
 			if (clickedOnOperator) {
 				calculate();
@@ -270,9 +277,11 @@ public class Calculator {
 			update = true;
 			decimalPoint = 0;
 		}
+		
 	}
 
 	class MultiplicationListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent arg0) {
 			if (clickedOnOperator) {
 				calculate();
@@ -285,9 +294,11 @@ public class Calculator {
 			update = true;
 			decimalPoint = 0;
 		}
+		
 	}
 
 	class DivisionListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent arg0) {
 			if (clickedOnOperator) {
 				calculate();
@@ -300,9 +311,11 @@ public class Calculator {
 			update = true;
 			decimalPoint = 0;
 		}
+		
 	}
 
 	class AllClearListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent arg0) {
 			clickedOnOperator = false;
 			update = true;
@@ -311,9 +324,11 @@ public class Calculator {
 			operator = "";
 			display.setText("0");
 		}
+		
 	}
 
 	class BackListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent e) {
 			String str = display.getText();
 			if (str.length() > 0)
@@ -324,9 +339,11 @@ public class Calculator {
 				decimalPoint = 0;
 			display.setText(str);
 		}
+		
 	}
 
 	class ChangeSignListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent e) {
 			String str = display.getText();
 			if (str == "0")
@@ -339,9 +356,11 @@ public class Calculator {
 			}
 			display.setText(str);
 		}
+		
 	}
 
 	class ResultListener implements ActionListener {
+		
 		public void actionPerformed(ActionEvent arg0) {
 			calculate();
 			finalZero();
@@ -349,9 +368,11 @@ public class Calculator {
 			decimalPoint = 0;
 			clickedOnOperator = false;
 		}
+		
 	}
 
 	class Button extends BasicButtonUI {
+		
 		@Override
 		public void installUI(JComponent component) {
 			super.installUI(component);
@@ -375,6 +396,7 @@ public class Calculator {
 			graphics.setColor(component.getBackground());
 			graphics.fillRoundRect(0, yOffset, size.width, size.height + yOffset - 5, 10, 10);
 		}
+		
 	}
 
 	public void start() {
