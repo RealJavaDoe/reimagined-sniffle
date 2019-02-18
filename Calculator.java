@@ -21,9 +21,9 @@ import javax.swing.plaf.basic.BasicButtonUI;
 /**
  * @author Jean-Pierre PEIFFER
  * @edition 2019
- * @version 1.0
+ * @version 1
  * 
- *          This works fine with Windows 10 and Java 10 or GNU/Linux (Ubuntu
+ *          This works fine with Windows 10 and Java 10 & GNU/Linux (Ubuntu
  *          18.10) and Java 8
  * 
  */
@@ -45,8 +45,8 @@ public class Calculator {
 	private static final Dimension DIM_8 = new Dimension(310, 280);
 	private static final Font FONT_1 = new Font("Arial", Font.BOLD, 20);
 	private static final Font FONT_2 = new Font("Arial", Font.PLAIN, 16);
-	private static final String[] TEXT = { "7", "8", "9", "4", "5", "6", "1", "2", "3", ".", "0", "\u00b1",
-			"\u00f7", "\u00d7", "-", "+", "\u25c4", "C", "=" };
+	private static final String[] TEXT = { "7", "8", "9", "4", "5", "6", "1", "2", "3", ".", "0", "\u00b1", "\u00f7",
+			"\u00d7", "-", "+", "\u25c4", "C", "=", "Calculator" };
 	private static final JButton[] BUTTON = new JButton[TEXT.length];
 	private boolean clickedOnOperator = false, update = false;
 	private double number;
@@ -379,7 +379,7 @@ public class Calculator {
 
 	public void start() {
 		JFrame frame = new JFrame();
-		frame.setTitle("Calculator");
+		frame.setTitle(TEXT[19]);
 		frame.setSize(DIM_8);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
