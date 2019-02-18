@@ -64,9 +64,7 @@ public class PasswordGenerator {
 
 	public JPanel getContainer(int index, boolean test1, boolean test2, boolean test3, boolean test4, String str1,
 			String str2) {
-
 		container.setBackground(COLOR);
-
 		panel[0] = new JPanel();
 		panel[0].setBackground(COLOR);
 		panel[0].setBorder(BorderFactory.createTitledBorder(BORDER_1, TEXT[0], TitledBorder.LEFT, TitledBorder.TOP));
@@ -82,12 +80,10 @@ public class PasswordGenerator {
 		}
 		comboBox.setSelectedIndex(index);
 		panel[1].add(comboBox);
-
 		panel[2] = new JPanel();
 		panel[2].setBackground(COLOR);
 		panel[2].setBorder(BorderFactory.createTitledBorder(BORDER_3, TEXT[2], TitledBorder.LEFT, TitledBorder.TOP));
 		panel[2].setLayout(new FlowLayout(FlowLayout.LEFT));
-
 		checkBox[0] = new JCheckBox(TEXT[3]);
 		checkBox[0].setBackground(COLOR);
 		checkBox[0].setSelected(true);
@@ -101,39 +97,31 @@ public class PasswordGenerator {
 		checkBox[3] = new JCheckBox(TEXT[6]);
 		checkBox[3].setBackground(COLOR);
 		checkBox[3].setSelected(test3);
-
 		box[0] = Box.createVerticalBox();
 		box[0].add(checkBox[0]);
 		box[0].add(checkBox[1]);
 		box[0].add(checkBox[2]);
 		box[0].add(checkBox[3]);
 		panel[2].add(box[0]);
-
 		panel[3] = new JPanel();
 		panel[3].setBackground(COLOR);
 		panel[3].setBorder(BorderFactory.createTitledBorder(BORDER_3, TEXT[7], TitledBorder.LEFT, TitledBorder.TOP));
 		panel[3].setLayout(new FlowLayout(FlowLayout.LEFT));
-
 		checkBox[4] = new JCheckBox(TEXT[8]);
 		checkBox[4].setBackground(COLOR);
 		checkBox[4].setSelected(test4);
 		panel[3].add(checkBox[4]);
-
 		box[1] = Box.createVerticalBox();
 		box[1].add(panel[1]);
 		box[1].add(panel[2]);
 		box[1].add(panel[3]);
-
 		panel[0].add(box[1]);
-
 		panel[4] = new JPanel();
 		panel[4].setBackground(COLOR);
 		panel[4].setLayout(new FlowLayout(FlowLayout.LEFT));
-
 		button = new JButton(TEXT[9]);
 		button.addActionListener(new Generate());
 		panel[4].add(button);
-
 		textArea[0] = new JTextArea(str1);
 		textArea[0].setPreferredSize(DIM_1);
 		textArea[0].setBackground(COLOR);
@@ -141,7 +129,6 @@ public class PasswordGenerator {
 		textArea[0].setBorder(BORDER_2);
 		textArea[0].setEditable(false);
 		panel[4].add(textArea[0]);
-
 		panel[5] = new JPanel();
 		panel[5].setBackground(COLOR);
 		panel[5].setBorder(BorderFactory.createTitledBorder(BORDER_1, TEXT[10], TitledBorder.LEFT, TitledBorder.TOP));
@@ -153,20 +140,17 @@ public class PasswordGenerator {
 		textArea[1].setBorder(BORDER_2);
 		textArea[1].setEditable(false);
 		panel[5].add(textArea[1]);
-
 		box[2] = Box.createVerticalBox();
 		box[2].add(panel[0]);
 		box[2].add(panel[4]);
 		box[2].add(panel[5]);
-
 		container.add(box[2]);
 		return container;
-
 	}
 
 	class Generate implements ActionListener {
+		
 		public void actionPerformed(ActionEvent arg0) {
-
 			boolean testUppercaseCharacters = false;
 			boolean testDigits = false;
 			boolean testSpecialCharacters = false;
@@ -174,7 +158,6 @@ public class PasswordGenerator {
 			int numberOfUppercaseCharacters, numberOfDigits, numberOfSpecialCharacters;
 			int passwordLength = Integer.valueOf((String) comboBox.getSelectedItem());
 			int halfLength = passwordLength / 2;
-
 			if (checkBox[1].isSelected()) {
 				numberOfUppercaseCharacters = (int) (Math.random() * halfLength) + 1;
 				testUppercaseCharacters = true;
@@ -197,12 +180,10 @@ public class PasswordGenerator {
 				digits = "23456789";
 				testSimilarCharacters = true;
 			}
-
 			char[] allRandomizedCharacters = new char[passwordLength];
 			int value = 0;
 			int numberOfLowercaseCharacters = passwordLength - numberOfUppercaseCharacters - numberOfDigits
 					- numberOfSpecialCharacters;
-
 			for (int i = 0; i < numberOfLowercaseCharacters; i++) {
 				int j = (int) Math.floor(Math.random() * lowercaseCharacters.length());
 				allRandomizedCharacters[value] = lowercaseCharacters.charAt(j);
@@ -223,14 +204,12 @@ public class PasswordGenerator {
 				allRandomizedCharacters[value] = specialCharacters.charAt(j);
 				value++;
 			}
-
 			ArrayList<String> shuffledList = new ArrayList<String>();
 			for (int i = 0; i < passwordLength; i++) {
 				shuffledList.add(String.valueOf(allRandomizedCharacters[i]));
 			}
 			Collections.shuffle(shuffledList);
 			String password = String.join("", shuffledList);
-
 			String lowercaseChar = TEXT[11];
 			String uppercaseChar = TEXT[12];
 			String digits = TEXT[13];
@@ -243,18 +222,16 @@ public class PasswordGenerator {
 				digits = TEXT[17];
 			if (numberOfSpecialCharacters == 0 || numberOfSpecialCharacters == 1)
 				specialCharacters = TEXT[18];
-
 			String details = TEXT[19] + passwordLength + TEXT[20] + LINE_SEPARATOR + " - " + numberOfLowercaseCharacters
 					+ lowercaseChar + LINE_SEPARATOR + " - " + numberOfUppercaseCharacters + uppercaseChar
 					+ LINE_SEPARATOR + " - " + numberOfDigits + digits + LINE_SEPARATOR + " - "
 					+ numberOfSpecialCharacters + specialCharacters;
-
 			container.removeAll();
 			frame.add(getContainer(passwordLength - 6, testUppercaseCharacters, testDigits, testSpecialCharacters,
 					testSimilarCharacters, password, details));
 			frame.validate();
-
 		}
+		
 	}
 
 	public void start() {
