@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -22,16 +23,17 @@ import javax.swing.table.DefaultTableCellRenderer;
  * @edition 2019
  * @version 1.0
  * 
- *          This works fine with GNU/Linux (Ubuntu 18.10) and Java 8
+ *          This works fine with with Windows 10 and Java 10
  * 
  */
 
 public class MyCalendar {
 
 	private static final Color COLOR = new Color(245, 245, 245);
-	private static final Dimension DIM_1 = new Dimension(300, 225);
+	private static final Dimension DIM_1 = new Dimension(270, 225);
 	private static final Dimension DIM_2 = new Dimension(300, 345);
-	private static final Font FONT = new Font("Arial", Font.PLAIN, 14);
+	private static final Font FONT_1 = new Font("Arial", Font.BOLD, 12);
+	private static final Font FONT_2 = new Font("Arial", Font.PLAIN, 14);
 	private static final String[] DAY = { "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su" };
 	private static final String[] TEXT_BUTTON = { "\u22b2 Prev.", "Now", "Next \u22b3" };
 	private static final String[] TEXT_MONTH = { "January", "February", "March", "April", "May", "June", "July",
@@ -127,9 +129,10 @@ public class MyCalendar {
 				return false;
 			}
 		};
-		table.setRowHeight(ROW_HEIGHT);
 		table.getTableHeader().setPreferredSize(new Dimension(TABLE_WIDTH, ROW_HEIGHT));
 		table.getTableHeader().setReorderingAllowed(false);
+		table.getTableHeader().setFont(FONT_1);
+		table.setRowHeight(ROW_HEIGHT);
 		table.setPreferredSize(new Dimension(TABLE_WIDTH, table.getRowHeight() * table.getRowCount()));
 		table.setCellSelectionEnabled(false);
 		table.setBorder(BorderFactory.createLineBorder(UIManager.getColor("Table.gridColor")));
@@ -139,11 +142,11 @@ public class MyCalendar {
 		for (int i = 0; i < table.getColumnCount(); i++) {
 			table.getColumnModel().getColumn(i).setCellRenderer(tableCellRenderer);
 		}
-		JPanel panel = new JPanel();
+		JPanel panel = new JPanel(new BorderLayout());
 		panel.setPreferredSize(DIM_1);
 		panel.setBackground(COLOR);
-		panel.add(table.getTableHeader());
-		panel.add(table);
+		panel.add(table.getTableHeader(), BorderLayout.NORTH);
+		panel.add(table, BorderLayout.SOUTH);
 		return panel;
 	}
 
@@ -152,7 +155,7 @@ public class MyCalendar {
 		panel[0] = new JPanel();
 		panel[0].setBackground(COLOR);
 		label = new JLabel(TEXT_MONTH[month] + " " + year);
-		label.setFont(FONT);
+		label.setFont(FONT_2);
 		panel[0].add(label);
 		panel[1] = new JPanel();
 		panel[1].setBackground(COLOR);
