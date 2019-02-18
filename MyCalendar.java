@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableCellRenderer;
  * @edition 2019
  * @version 1.0
  * 
- *          This works fine with with Windows 10 and Java 10
+ *          This works fine with Windows 10 and Java 10
  * 
  */
 
