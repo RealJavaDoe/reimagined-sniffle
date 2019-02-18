@@ -197,7 +197,7 @@ public class MyCalendar {
 			}
 		}
 
-	};
+	}
 
 	class CurrentMonth implements ActionListener {
 
@@ -227,7 +227,7 @@ public class MyCalendar {
 			}
 		}
 
-	};
+	}
 
 	public void start(int month, int year) {
 		frame = new JFrame();
