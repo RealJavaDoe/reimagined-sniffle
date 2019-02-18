@@ -22,9 +22,9 @@ import javax.swing.border.TitledBorder;
 /**
  * @author Jean-Pierre PEIFFER
  * @edition 2019
- * @version 1.0
+ * @version 1
  * 
- *          This works fine with Windows 10 and Java 10 or GNU/Linux (Ubuntu
+ *          This works fine with Windows 10 and Java 10 & GNU/Linux (Ubuntu
  *          18.10) and Java 8
  * 
  */
@@ -47,7 +47,7 @@ public class PasswordGenerator {
 			"Exclude similar characters (e.g. 0 o O 1 l I)", "Generate", "DETAILS", " lowercase characters;",
 			" uppercase characters;", " digits;", " special characters.", " lowercase character;",
 			" uppercase character;", " digit;", " special character.", "The password is ",
-			" characters long and contains: ", " lowercase characters;" };
+			" characters long and contains: ", "Password generator" };
 	private Box[] box = new Box[3];
 	private JButton button = new JButton();
 	private JCheckBox[] checkBox = new JCheckBox[5];
@@ -62,8 +62,8 @@ public class PasswordGenerator {
 	private String digits = "0123456789";
 	private String specialCharacters = "#&*/+-=%!?,;:()[]{}@_$<>";
 
-	public JPanel getContainer(int indexPasswordLength, boolean testUppercaseCharacters, boolean testDigits,
-			boolean testSpecialCharacters, boolean testSimilarCharacters, String password, String details) {
+	public JPanel getContainer(int index, boolean test1, boolean test2, boolean test3, boolean test4, String str1,
+			String str2) {
 
 		container.setBackground(COLOR);
 
@@ -80,7 +80,7 @@ public class PasswordGenerator {
 		for (int i = 6; i < MAXIMUM_PASSWORD_LENGTH + 1; i++) {
 			comboBox.addItem(String.valueOf(i));
 		}
-		comboBox.setSelectedIndex(indexPasswordLength);
+		comboBox.setSelectedIndex(index);
 		panel[1].add(comboBox);
 
 		panel[2] = new JPanel();
@@ -94,13 +94,13 @@ public class PasswordGenerator {
 		checkBox[0].setEnabled(false);
 		checkBox[1] = new JCheckBox(TEXT[4]);
 		checkBox[1].setBackground(COLOR);
-		checkBox[1].setSelected(testUppercaseCharacters);
+		checkBox[1].setSelected(test1);
 		checkBox[2] = new JCheckBox(TEXT[5]);
 		checkBox[2].setBackground(COLOR);
-		checkBox[2].setSelected(testDigits);
+		checkBox[2].setSelected(test2);
 		checkBox[3] = new JCheckBox(TEXT[6]);
 		checkBox[3].setBackground(COLOR);
-		checkBox[3].setSelected(testSpecialCharacters);
+		checkBox[3].setSelected(test3);
 
 		box[0] = Box.createVerticalBox();
 		box[0].add(checkBox[0]);
@@ -116,7 +116,7 @@ public class PasswordGenerator {
 
 		checkBox[4] = new JCheckBox(TEXT[8]);
 		checkBox[4].setBackground(COLOR);
-		checkBox[4].setSelected(testSimilarCharacters);
+		checkBox[4].setSelected(test4);
 		panel[3].add(checkBox[4]);
 
 		box[1] = Box.createVerticalBox();
@@ -134,7 +134,7 @@ public class PasswordGenerator {
 		button.addActionListener(new Generate());
 		panel[4].add(button);
 
-		textArea[0] = new JTextArea(password);
+		textArea[0] = new JTextArea(str1);
 		textArea[0].setPreferredSize(DIM_1);
 		textArea[0].setBackground(COLOR);
 		textArea[0].setFont(FONT_1);
@@ -146,7 +146,7 @@ public class PasswordGenerator {
 		panel[5].setBackground(COLOR);
 		panel[5].setBorder(BorderFactory.createTitledBorder(BORDER_1, TEXT[10], TitledBorder.LEFT, TitledBorder.TOP));
 		panel[5].setLayout(new FlowLayout(FlowLayout.LEFT));
-		textArea[1] = new JTextArea(details);
+		textArea[1] = new JTextArea(str2);
 		textArea[1].setPreferredSize(DIM_2);
 		textArea[1].setBackground(COLOR);
 		textArea[1].setFont(FONT_2);
@@ -259,7 +259,7 @@ public class PasswordGenerator {
 
 	public void start() {
 		frame = new JFrame();
-		frame.setTitle("Password Generator");
+		frame.setTitle(TEXT[21]);
 		frame.setSize(DIM_3);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
