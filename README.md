@@ -7,4 +7,4 @@ Well, as their names say, you can create:
 - and a password generator (PasswordGenerator.java).
 
 
-I wrote them in Java. Hope it will help you!
+I wrote them all in Java. Hope it will help you!
