@@ -91,53 +91,7 @@ public class MyPuzzle extends JFrame {
 					emptyTileLabel = new JLabel("");
 					panel[0].add(emptyTileLabel);
 				} else {
-					switch (newOrder[counter]) {
-					case 0:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 1:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 2:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 3:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 4:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 5:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 6:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 7:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 8:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 9:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 10:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 11:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 12:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 13:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					case 14:
-						label = new JLabel(String.valueOf(newOrder[counter] + 1));
-						break;
-					}
+					label = new JLabel(String.valueOf(newOrder[counter] + 1));
 					tileButton = new JButton(label.getText());
 					tileButton.setPreferredSize(DIM_2);
 					tileButton.setFont(FONT_1);
