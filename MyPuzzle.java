@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 
 /**
  * @author Jean-Pierre PEIFFER
@@ -16,6 +17,7 @@ import javax.swing.*;
 @SuppressWarnings("serial")
 public class MyPuzzle extends JFrame {
 
+	private static final Border BORDER = BorderFactory.createMatteBorder(3, 3, 3, 3, Color.BLACK);
 	private static final Color COLOR_1 = new Color(245, 245, 245);
 	private static final Color COLOR_2 = new Color(255, 230, 230);
 	private static final Dimension DIM_1 = new Dimension(360, 360);
@@ -79,6 +81,7 @@ public class MyPuzzle extends JFrame {
 		panel[0].setPreferredSize(DIM_1);
 		panel[0].setBackground(Color.WHITE);
 		panel[0].setLayout(new GridLayout(4, 4, 0, 0));
+		panel[0].setBorder(BORDER);
 		int[] randomNumbers = getSolubleGame();
 		for (int i = 0; i < 15; i++) {
 			newOrder[i] = randomNumbers[i];
