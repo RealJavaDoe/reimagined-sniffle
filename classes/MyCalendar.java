@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 /**
  * @author Jean-Pierre PEIFFER
  * @edition 2019
- * @version 1.0
+ * @version 1.00
  * 
  *          This works fine with Windows 10 and Java 10
  * 
