@@ -9,7 +9,7 @@ import javax.swing.border.Border;
 /**
  * @author Jean-Pierre PEIFFER
  * @edition 2019
- * @version 1.0
+ * @version 1.00
  * 
  *          This code works fine with Windows 10 and Java 10
  */
