@@ -77,7 +77,7 @@ public class MyCalendar {
 		return numberOfDays;
 	}
 
-	public int getFisrtDayOfTheMonth(int month, int year) {
+	public int getFirstDayOfTheMonth(int month, int year) {
 		month++;
 		int firstDayOfTheMonth;
 		if (month >= 3)
@@ -102,7 +102,7 @@ public class MyCalendar {
 		String[][] data = new String[6][7];
 		int day = 1;
 		int numberOfDays = getNumberOfDays(month, year);
-		int firstDayOfTheMonth = getFisrtDayOfTheMonth(month, year);
+		int firstDayOfTheMonth = getFirstDayOfTheMonth(month, year);
 		for (int i = 0; i <= 5; i++) {
 			if (i == 0) {
 				for (int j = (firstDayOfTheMonth - 1); j <= 6; j++) {
