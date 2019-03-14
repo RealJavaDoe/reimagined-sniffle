@@ -8,4 +8,4 @@ Well, as their names indicate rather well, you can create:
 
 I wrote them all in Java. You can take a look at the screenshots to get an idea.
 
-See ya next code!
+See you next code!
