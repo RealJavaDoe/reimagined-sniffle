@@ -6,5 +6,6 @@ Well, as their names say, you can create:
 - a 15-puzzle (MyPuzzle.java);
 - and a password generator (PasswordGenerator.java).
 
+Take a look at the screenshots to get an idea!
 
 I wrote them all in Java. See ya next code!
