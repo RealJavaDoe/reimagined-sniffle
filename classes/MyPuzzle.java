@@ -28,7 +28,7 @@ public class MyPuzzle extends JFrame {
 	private static final Font FONT_1 = new Font("Arial", Font.BOLD, 48);
 	private static final Font FONT_2 = new Font("Arial", Font.PLAIN, 18);
 	private static final Font FONT_3 = new Font("Arial", Font.PLAIN, 26);
-	private static final String[] TEXT = { "Shuffle", "Score: ", "Press the OK key to play another game.",
+	private static final String[] TEXT = { "Scramble", "Score: ", "Press the OK key to play another game.",
 			"Congratulations!", "15-puzzle" };
 	private JButton tileButton;
 	private JButton optionButton = new JButton(TEXT[0]);
