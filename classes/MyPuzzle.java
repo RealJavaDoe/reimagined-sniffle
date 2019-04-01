@@ -11,7 +11,9 @@ import javax.swing.border.Border;
  * @edition 2019
  * @version 1.00
  * 
- *          This code works fine with Windows 10 and Java 10
+ *          This works fine with Windows 10 and Java 10 & GNU/Linux (Ubuntu
+ *          18.10) and Java 8
+ *
  */
 
 @SuppressWarnings("serial")
@@ -25,7 +27,7 @@ public class MyPuzzle extends JFrame {
 	private static final Dimension DIM_3 = new Dimension(160, 50);
 	private static final Dimension DIM_4 = new Dimension(160, 50);
 	private static final Dimension DIM_5 = new Dimension(400, 460);
-	private static final Font FONT_1 = new Font("Arial", Font.BOLD, 48);
+	private static final Font FONT_1 = new Font("Arial", Font.BOLD, 40);
 	private static final Font FONT_2 = new Font("Arial", Font.PLAIN, 18);
 	private static final Font FONT_3 = new Font("Arial", Font.PLAIN, 26);
 	private static final String[] TEXT = { "Scramble", "Score: ", "Press the OK key to play another game.",
