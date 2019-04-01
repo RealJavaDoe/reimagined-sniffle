@@ -12,6 +12,7 @@ import java.util.Date;
  * 
  *          This works fine with Windows 10 and Java 10 & GNU/Linux (Ubuntu
  *          18.10) and Java 8
+ *
  */
 
 public class Clock {
