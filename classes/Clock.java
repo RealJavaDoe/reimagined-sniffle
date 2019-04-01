@@ -10,7 +10,8 @@ import java.util.Date;
  * @edition 2019
  * @version 1.00
  * 
- *          This code works fine with Windows 10 and Java 10
+ *          This works fine with Windows 10 and Java 10 & GNU/Linux (Ubuntu
+ *          18.10) and Java 8
  */
 
 public class Clock {
