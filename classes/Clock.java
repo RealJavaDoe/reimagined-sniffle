@@ -20,7 +20,7 @@ public class Clock {
 	private static final Color COLOR = new Color(245, 245, 245);
 	private static final Dimension DIM = new Dimension(300, 140);
 	private static final Font FONT = new Font("Arial", Font.PLAIN, 60);
-	private static final String TEXT = "Clock";
+	private static final String NAME = "Clock";
 	private JLabel clock;
 	private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
 
@@ -46,7 +46,7 @@ public class Clock {
 
 	public void start() {
 		JFrame frame = new JFrame();
-		frame.setTitle(TEXT);
+		frame.setTitle(NAME);
 		frame.setSize(DIM);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
