@@ -11,7 +11,7 @@ import javax.swing.border.Border;
  * @edition 2019
  * @version 1.00
  * 
- *          This works fine with Windows 10 and Java 10 & GNU/Linux (Ubuntu
+ *          This code works fine with Windows 10 and Java 10 or GNU/Linux (Ubuntu
  *          18.10) and Java 8
  *
  */
