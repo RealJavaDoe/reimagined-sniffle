@@ -38,7 +38,7 @@ public class MyNewCalendar {
 	private static final Dimension DIM_2 = new Dimension(270, 40);
 	private static final Dimension DIM_3 = new Dimension(300, 380);
 	private static final Font FONT_1 = new Font("Arial", Font.BOLD, 12);
-	private static final Font FONT_2 = new Font("Arial", Font.BOLD, 17);
+	private static final Font FONT_2 = new Font("Arial", Font.BOLD, 14);
 	private static final Font FONT_3 = new Font("Arial", Font.PLAIN, 14);
 	private static final String[] DAY = { "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su" };
 	private static final String[] TEXT_BUTTON = { "\u22b2 Prev.", "Now", "Next \u22b3" };
@@ -57,7 +57,7 @@ public class MyNewCalendar {
 	private JLabel[] label = new JLabel[2];
 	private JPanel container = new JPanel();
 	private JPanel[] panel = new JPanel[3];
-	private SimpleDateFormat timeFormat = new SimpleDateFormat("EEE MMM d, yyyy hh:mm:ss", Locale.ENGLISH);
+	private SimpleDateFormat timeFormat = new SimpleDateFormat("EEE MMM d, yyyy - hh:mm:ss a", Locale.ENGLISH);
 	private int year = CURRENT_YEAR;
 	private int month = CURRENT_MONTH;
 
